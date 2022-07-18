@@ -1,0 +1,6 @@
+selected resource name:		pipeline3
+selected resource type:		pipeline
+factory name:			VR-ADF-V2
+factory location:		eastus
+subscription id:		a71d44b7-7d12-4181-8ff6-bfb028190385
+time of download (UTC):		Fri, 15 Jul 2022 06:37:44 GMT

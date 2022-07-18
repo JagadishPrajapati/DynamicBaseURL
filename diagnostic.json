@@ -1,0 +1,22 @@
+{
+    "now": "2022-07-15T06:37:44.628Z",
+    "perfNow": 52013655.9,
+    "diagnosticCorrelation": "63b6d516-c6d2-4ba1-9fbb-1a0b0ced560e",
+    "source": "DownloadSupportFiles",
+    "environment": {
+        "productName": "adf",
+        "buildVersion": "1.0.071222.8",
+        "environmentType": 3,
+        "resourceName": "VR-ADF-V2",
+        "resourceRegion": "eastus",
+        "resourceGroup": "VR-Dev-RG",
+        "subscriptionId": "a71d44b7-7d12-4181-8ff6-bfb028190385",
+        "sessionId": "5LUos",
+        "operationId": "fm78Z",
+        "gitType": "VSTS"
+    },
+    "additionalInfo": {
+        "selectedResource": "pipeline3",
+        "selectedResourceType": "pipeline"
+    }
+}

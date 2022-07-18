@@ -1,0 +1,75 @@
+{
+    "name": "pipeline3",
+    "properties": {
+        "activities": [
+            {
+                "name": "Web1",
+                "type": "WebActivity",
+                "dependsOn": [
+                    {
+                        "activity": "StartTime",
+                        "dependencyConditions": [
+                            "Succeeded"
+                        ]
+                    },
+                    {
+                        "activity": "Endtime",
+                        "dependencyConditions": [
+                            "Succeeded"
+                        ]
+                    }
+                ],
+                "policy": {
+                    "timeout": "7.00:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "url": {
+                        "value": "@http://rd.blaztrack.com:3000/api/customer/getdata?customer=5c75219ae3abb06a1ed19d3c&start=variables('start')&end=variables('Endtime')",
+                        "type": "Expression"
+                    },
+                    "method": "GET"
+                }
+            },
+            {
+                "name": "StartTime",
+                "type": "SetVariable",
+                "dependsOn": [],
+                "userProperties": [],
+                "typeProperties": {
+                    "variableName": "start",
+                    "value": {
+                        "value": "@adddays(utcnow(), -15)",
+                        "type": "Expression"
+                    }
+                }
+            },
+            {
+                "name": "Endtime",
+                "type": "SetVariable",
+                "dependsOn": [],
+                "userProperties": [],
+                "typeProperties": {
+                    "variableName": "Endtime",
+                    "value": {
+                        "value": "@utcnow()",
+                        "type": "Expression"
+                    }
+                }
+            }
+        ],
+        "variables": {
+            "start": {
+                "type": "String"
+            },
+            "Endtime": {
+                "type": "String"
+            }
+        },
+        "annotations": []
+    }
+}
